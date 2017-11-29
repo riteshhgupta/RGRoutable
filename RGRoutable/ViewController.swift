@@ -7,19 +7,28 @@
 //
 
 import UIKit
+import ReactiveSwift
 
 class ViewController: UIViewController {
 
+	private var _router: Router!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		let paylaod = MutableProperty<RoutablePayload?>(nil)
+		router = Router()
+		router.reactive.onNext <~ paylaod.producer.skipNil()
+		router.reactive.onNextSignal.observeValues { print($0) }
+		paylaod.value = RoutablePayload(sender: self)
+		paylaod.value = RoutablePayload(sender: self)
+		paylaod.value = RoutablePayload(sender: self)
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
-
 }
 
+extension ViewController: Routable {
+	
+	var router: Router {
+		get { return _router }
+		set { _router = newValue }
+	}
+}

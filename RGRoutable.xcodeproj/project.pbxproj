@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C127DCB210A80D31691120D /* Pods_RGRoutable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4357431E38387381ED6FAA2 /* Pods_RGRoutable.framework */; };
 		3D285EE11FC9E2E400D97F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D285EE01FC9E2E400D97F77 /* AppDelegate.swift */; };
 		3D285EE31FC9E2E400D97F77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D285EE21FC9E2E400D97F77 /* ViewController.swift */; };
 		3D285EE61FC9E2E400D97F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D285EE41FC9E2E400D97F77 /* Main.storyboard */; };
@@ -16,9 +17,11 @@
 		3D285EF61FC9E32700D97F77 /* RoutableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D285EF51FC9E32700D97F77 /* RoutableData.swift */; };
 		3D285EF81FC9E33500D97F77 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D285EF71FC9E33500D97F77 /* Router.swift */; };
 		3D285EFA1FC9E34700D97F77 /* RoutablePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D285EF91FC9E34700D97F77 /* RoutablePayload.swift */; };
+		3D70C6BC1FCD649800A4ADC4 /* Router+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C6BB1FCD649800A4ADC4 /* Router+Reactive.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C594D0F7BAA0774133B9943 /* Pods-RGRoutable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGRoutable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RGRoutable/Pods-RGRoutable.debug.xcconfig"; sourceTree = "<group>"; };
 		3D285EDD1FC9E2E400D97F77 /* RGRoutable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGRoutable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D285EE01FC9E2E400D97F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D285EE21FC9E2E400D97F77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		3D285EF51FC9E32700D97F77 /* RoutableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutableData.swift; sourceTree = "<group>"; };
 		3D285EF71FC9E33500D97F77 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		3D285EF91FC9E34700D97F77 /* RoutablePayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutablePayload.swift; sourceTree = "<group>"; };
+		3D70C6BB1FCD649800A4ADC4 /* Router+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Reactive.swift"; sourceTree = "<group>"; };
+		CC4BA4E154D9C8284DE37AFC /* Pods-RGRoutable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGRoutable.release.xcconfig"; path = "Pods/Target Support Files/Pods-RGRoutable/Pods-RGRoutable.release.xcconfig"; sourceTree = "<group>"; };
+		E4357431E38387381ED6FAA2 /* Pods_RGRoutable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGRoutable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,18 +43,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C127DCB210A80D31691120D /* Pods_RGRoutable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15549FF7BC0C87030F800DA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C594D0F7BAA0774133B9943 /* Pods-RGRoutable.debug.xcconfig */,
+				CC4BA4E154D9C8284DE37AFC /* Pods-RGRoutable.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3D285ED41FC9E2E400D97F77 = {
 			isa = PBXGroup;
 			children = (
-				3D285EF21FC9E2ED00D97F77 /* Source */,
-				3D285EDF1FC9E2E400D97F77 /* RGRoutable */,
+				F413E8C162746C15C1CC0A25 /* Frameworks */,
+				15549FF7BC0C87030F800DA1 /* Pods */,
 				3D285EDE1FC9E2E400D97F77 /* Products */,
+				3D285EDF1FC9E2E400D97F77 /* RGRoutable */,
+				3D285EF21FC9E2ED00D97F77 /* Source */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,11 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				3D285EE01FC9E2E400D97F77 /* AppDelegate.swift */,
-				3D285EE21FC9E2E400D97F77 /* ViewController.swift */,
-				3D285EE41FC9E2E400D97F77 /* Main.storyboard */,
 				3D285EE71FC9E2E400D97F77 /* Assets.xcassets */,
-				3D285EE91FC9E2E400D97F77 /* LaunchScreen.storyboard */,
 				3D285EEC1FC9E2E400D97F77 /* Info.plist */,
+				3D285EE91FC9E2E400D97F77 /* LaunchScreen.storyboard */,
+				3D285EE41FC9E2E400D97F77 /* Main.storyboard */,
+				3D285EE21FC9E2E400D97F77 /* ViewController.swift */,
 			);
 			path = RGRoutable;
 			sourceTree = "<group>";
@@ -76,12 +94,37 @@
 		3D285EF21FC9E2ED00D97F77 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3DA820241FCF32CD0029F7F7 /* Core */,
+				3DA820251FCF32D50029F7F7 /* Reactive */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		3DA820241FCF32CD0029F7F7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
 				3D285EF31FC9E30500D97F77 /* Routable.swift */,
 				3D285EF51FC9E32700D97F77 /* RoutableData.swift */,
 				3D285EF91FC9E34700D97F77 /* RoutablePayload.swift */,
 				3D285EF71FC9E33500D97F77 /* Router.swift */,
 			);
-			path = Source;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3DA820251FCF32D50029F7F7 /* Reactive */ = {
+			isa = PBXGroup;
+			children = (
+				3D70C6BB1FCD649800A4ADC4 /* Router+Reactive.swift */,
+			);
+			path = Reactive;
+			sourceTree = "<group>";
+		};
+		F413E8C162746C15C1CC0A25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4357431E38387381ED6FAA2 /* Pods_RGRoutable.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,9 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D285EEF1FC9E2E400D97F77 /* Build configuration list for PBXNativeTarget "RGRoutable" */;
 			buildPhases = (
+				CA16451C3788FA3A49F7FB01 /* [CP] Check Pods Manifest.lock */,
 				3D285ED91FC9E2E400D97F77 /* Sources */,
 				3D285EDA1FC9E2E400D97F77 /* Frameworks */,
 				3D285EDB1FC9E2E400D97F77 /* Resources */,
+				E081E3C8C92D823571A6D1C1 /* [CP] Embed Pods Frameworks */,
+				35D44D0A6A29C1CCAE6028E0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,11 +197,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35D44D0A6A29C1CCAE6028E0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RGRoutable/Pods-RGRoutable-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA16451C3788FA3A49F7FB01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RGRoutable-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E081E3C8C92D823571A6D1C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RGRoutable/Pods-RGRoutable-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RGRoutable/Pods-RGRoutable-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D285ED91FC9E2E400D97F77 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D70C6BC1FCD649800A4ADC4 /* Router+Reactive.swift in Sources */,
 				3D285EE31FC9E2E400D97F77 /* ViewController.swift in Sources */,
 				3D285EFA1FC9E34700D97F77 /* RoutablePayload.swift in Sources */,
 				3D285EF61FC9E32700D97F77 /* RoutableData.swift in Sources */,
@@ -174,6 +279,7 @@
 				3D285EE51FC9E2E400D97F77 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		3D285EE91FC9E2E400D97F77 /* LaunchScreen.storyboard */ = {
@@ -182,6 +288,7 @@
 				3D285EEA1FC9E2E400D97F77 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -296,6 +403,7 @@
 		};
 		3D285EF01FC9E2E400D97F77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C594D0F7BAA0774133B9943 /* Pods-RGRoutable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +419,7 @@
 		};
 		3D285EF11FC9E2E400D97F77 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC4BA4E154D9C8284DE37AFC /* Pods-RGRoutable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
