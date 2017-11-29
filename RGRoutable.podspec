@@ -15,14 +15,15 @@ Pod::Spec.new do |spec|
   spec.requires_arc =  true
 
   spec.subspec 'Core' do |core|
-      core.source_files =  'Source/Core/*.{swift}'
+    core.source_files =  'Source/**/*.swift'
+    core.exclude_files = 'Source/Reactive/*.swift'
   end
 
   spec.subspec 'ReactiveSwift' do |reactiveswift|
-      reactiveswift.dependency 'RGListKit/Core'
-      reactiveswift.dependency 'ReactiveSwift', '~> 3.0'
-      reactiveswift.dependency 'ReactiveCocoa', '~> 7.0'
-      reactiveswift.source_files =  'Source/Core/*.{swift}', 'Source/Reactive/*.{swift}'
+    reactiveswift.dependency 'RGRoutable/Core'
+    reactiveswift.dependency 'ReactiveSwift', '~> 3.0'
+    reactiveswift.dependency 'ReactiveCocoa', '~> 7.0'
+    reactiveswift.source_files =  'Source/**/*.swift'
   end
 
   spec.default_subspec = 'Core'

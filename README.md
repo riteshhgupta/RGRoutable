@@ -6,8 +6,16 @@
 
 To integrate RGRoutable into your Xcode project using CocoaPods, specify it in your Podfile:
 
+#### Swift 4.0
+
 ```
 pod 'RGRoutable', :git => 'https://github.com/riteshhgupta/RGRoutable.git'
+```
+
+#### Swift 4.0 + ReactiveSwift
+
+```
+pod 'RGRoutable/ReactiveSwift', :git => 'https://github.com/riteshhgupta/RGRoutable.git'
 ```
 
 ## Contributing
