@@ -49,8 +49,8 @@ public extension Routable where Self: UIViewController {
 }
 
 public extension Routable {
-	
-	var defaultPayload: RoutablePayload {
-		return RoutablePayload(sender: self)
+
+	public func routablePayload(data: RoutableData? = nil) -> RoutablePayload {
+		return RoutablePayload(data: data, sender: self)
 	}
 }
