@@ -11,7 +11,7 @@ import UIKit
 
 public protocol Routable: class {
 	
-	var router: Router { get set }
+	var router: Router { get }
 	
 	func present(next: Routable)
 	func push(next: Routable)

@@ -1,24 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="RGRoutable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HomeViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYj-Mj-Ugh">
+                                <rect key="frame" x="102.5" y="333" width="169.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkv-1T-O5v">
+                                <rect key="frame" x="138.5" y="239" width="98" height="30"/>
+                                <state key="normal" title="Open Settings"/>
+                                <connections>
+                                    <action selector="didTapSettingsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Opu-4C-Cud"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpm-TD-ccj">
+                                <rect key="frame" x="144.5" y="418" width="85" height="30"/>
+                                <state key="normal" title="Open Profile"/>
+                                <connections>
+                                    <action selector="didTapProfileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3b4-be-CwD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CYj-Mj-Ugh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="J25-po-rxO"/>
+                            <constraint firstItem="lpm-TD-ccj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SeZ-by-GIE"/>
+                            <constraint firstItem="CYj-Mj-Ugh" firstAttribute="top" secondItem="mkv-1T-O5v" secondAttribute="bottom" constant="64" id="iDG-7g-eLD"/>
+                            <constraint firstItem="mkv-1T-O5v" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="k5y-Ax-kS9"/>
+                            <constraint firstItem="lpm-TD-ccj" firstAttribute="top" secondItem="CYj-Mj-Ugh" secondAttribute="bottom" constant="64" id="m5h-Qe-fHo"/>
+                            <constraint firstItem="CYj-Mj-Ugh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qTL-1e-ThI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="6" y="32"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="NNg-7n-2qY">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="bcW-ay-QRd" customClass="SettingsViewController" customModule="RGRoutable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="koq-bc-j7t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SettingsViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lA-fh-89w">
+                                <rect key="frame" x="92.5" y="333" width="190.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Np-Fo-xqv">
+                                <rect key="frame" x="301" y="36" width="58" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapDismissButton:" destination="bcW-ay-QRd" eventType="touchUpInside" id="EuB-nZ-VZ5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3lA-fh-89w" firstAttribute="centerY" secondItem="apz-oh-ZCh" secondAttribute="centerY" id="4zS-5a-R20"/>
+                            <constraint firstItem="3lA-fh-89w" firstAttribute="centerX" secondItem="apz-oh-ZCh" secondAttribute="centerX" id="NmC-Kz-LEM"/>
+                            <constraint firstItem="apz-oh-ZCh" firstAttribute="trailing" secondItem="1Np-Fo-xqv" secondAttribute="trailing" constant="16" id="bvZ-BO-dcU"/>
+                            <constraint firstItem="1Np-Fo-xqv" firstAttribute="top" secondItem="apz-oh-ZCh" secondAttribute="top" constant="16" id="j4T-2i-rZ2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="apz-oh-ZCh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seB-v1-cpa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="32"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="gPG-Tm-Aw4">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="3nR-fK-x6r" customClass="ProfileViewController" customModule="RGRoutable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nsS-GN-YMa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProfileViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDS-qI-Fj6">
+                                <rect key="frame" x="100" y="333" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.3921568627" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jDS-qI-Fj6" firstAttribute="centerY" secondItem="EOp-K0-2j6" secondAttribute="centerY" id="7Xt-G6-oVA"/>
+                            <constraint firstItem="jDS-qI-Fj6" firstAttribute="centerX" secondItem="EOp-K0-2j6" secondAttribute="centerX" id="Mib-MB-0h0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EOp-K0-2j6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VYF-Du-RWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614" y="21"/>
         </scene>
     </scenes>
 </document>
