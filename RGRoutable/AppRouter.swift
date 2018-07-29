@@ -9,10 +9,15 @@
 import Foundation
 import UIKit
 
+final class AppNavigationController: UINavigationController, Routable {
+
+	let router = Router()
+}
+
 final class AppRouter {
 
 	var rootViewController: UIViewController {
-		return UINavigationController(rootViewController: homeVC)
+		return AppNavigationController(rootViewController: homeVC)
 	}
 
 	var homeVC: HomeViewController {
@@ -21,8 +26,8 @@ final class AppRouter {
 		controller.router.onNext = { [weak self] payload in
 			guard let this = self, let route = payload.data as? HomeViewController.Route else { return }
 			switch route {
-			case .settings: payload.sender?.present(next: this.settingsVC)
-			case .profile: payload.sender?.push(next: this.profileVC)
+			case .settings: payload.sender?.present(next: AppNavigationController(rootViewController: this.settingsVC), animated: true, completion: nil)
+			case .profile: payload.sender?.push(next: this.profileVC, animated: true)
 			}
 		}
 		return controller
@@ -32,7 +37,13 @@ final class AppRouter {
 		let sb = UIStoryboard(name: "Main", bundle: nil)
 		let controller = sb.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
 		controller.router.onComplete = { payload in
-			payload.sender?.remove(payload: payload)
+			payload.sender?.removeNavigationStack(payload: payload, animated: true, completion: nil)
+		}
+		controller.router.onNext = { [weak self] payload in
+			guard let this = self, let route = payload.data as? SettingsViewController.Route else { return }
+			switch route {
+			case .profile: payload.sender?.push(next: this.profileVC, animated: true)
+			}
 		}
 		return controller
 	}
@@ -40,6 +51,12 @@ final class AppRouter {
 	var profileVC: ProfileViewController {
 		let sb = UIStoryboard(name: "Main", bundle: nil)
 		let controller = sb.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+		controller.router.onNext = { [weak self] payload in
+			guard let this = self, let route = payload.data as? ProfileViewController.Route else { return }
+			switch route {
+			case .settings: payload.sender?.push(next: this.settingsVC, animated: true)
+			}
+		}
 		return controller
 	}
 }

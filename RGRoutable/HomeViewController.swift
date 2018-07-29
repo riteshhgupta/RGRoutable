@@ -15,7 +15,9 @@ class HomeViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		router.onReturn = { print("Here you can catch any in-coming data when returning from another screen = \($0)") }
+		router.onReturn = {
+			print("Coming to HomeViewController from \(String(describing: $0.sender))")
+		}
 	}
 
 	@IBAction func didTapSettingsButton(_ sender: UIButton) {
@@ -29,9 +31,7 @@ class HomeViewController: UIViewController {
 	}
 }
 
-extension HomeViewController: Routable {}
-
-extension HomeViewController {
+extension HomeViewController: Routable {
 
 	enum Route: RoutableData {
 		case settings

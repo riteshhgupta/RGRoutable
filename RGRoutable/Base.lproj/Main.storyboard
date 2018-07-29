@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,15 +25,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkv-1T-O5v">
-                                <rect key="frame" x="138.5" y="239" width="98" height="30"/>
-                                <state key="normal" title="Open Settings"/>
+                                <rect key="frame" x="156.5" y="239" width="62" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="didTapSettingsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Opu-4C-Cud"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpm-TD-ccj">
-                                <rect key="frame" x="144.5" y="418" width="85" height="30"/>
-                                <state key="normal" title="Open Profile"/>
+                                <rect key="frame" x="163" y="418" width="48" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Profile">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="didTapProfileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3b4-be-CwD"/>
                                 </connections>
@@ -69,6 +75,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuS-SR-qnK">
+                                <rect key="frame" x="163.5" y="386" width="48" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Profile">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapProfileButton:" destination="bcW-ay-QRd" eventType="touchUpInside" id="unP-Fx-tsO"/>
+                                    <action selector="didTapProfileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFp-RS-Mmf"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Np-Fo-xqv">
                                 <rect key="frame" x="301" y="36" width="58" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -84,8 +101,10 @@
                         <constraints>
                             <constraint firstItem="3lA-fh-89w" firstAttribute="centerY" secondItem="apz-oh-ZCh" secondAttribute="centerY" id="4zS-5a-R20"/>
                             <constraint firstItem="3lA-fh-89w" firstAttribute="centerX" secondItem="apz-oh-ZCh" secondAttribute="centerX" id="NmC-Kz-LEM"/>
+                            <constraint firstItem="EuS-SR-qnK" firstAttribute="centerX" secondItem="apz-oh-ZCh" secondAttribute="centerX" id="TwC-Ef-2Zb"/>
                             <constraint firstItem="apz-oh-ZCh" firstAttribute="trailing" secondItem="1Np-Fo-xqv" secondAttribute="trailing" constant="16" id="bvZ-BO-dcU"/>
                             <constraint firstItem="1Np-Fo-xqv" firstAttribute="top" secondItem="apz-oh-ZCh" secondAttribute="top" constant="16" id="j4T-2i-rZ2"/>
+                            <constraint firstItem="EuS-SR-qnK" firstAttribute="top" secondItem="3lA-fh-89w" secondAttribute="bottom" constant="32" id="jOj-XZ-Rs9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="apz-oh-ZCh"/>
                     </view>
@@ -108,18 +127,42 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewC-c8-eth">
+                                <rect key="frame" x="169" y="271" width="37" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapBackButton:" destination="3nR-fK-x6r" eventType="touchUpInside" id="nGx-g5-zFd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZv-Bx-30i">
+                                <rect key="frame" x="156" y="386" width="62" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSettingsButton:" destination="3nR-fK-x6r" eventType="touchUpInside" id="DGT-sT-C6K"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.3921568627" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tZv-Bx-30i" firstAttribute="top" secondItem="jDS-qI-Fj6" secondAttribute="bottom" constant="32" id="4h7-l4-ETv"/>
                             <constraint firstItem="jDS-qI-Fj6" firstAttribute="centerY" secondItem="EOp-K0-2j6" secondAttribute="centerY" id="7Xt-G6-oVA"/>
+                            <constraint firstItem="tZv-Bx-30i" firstAttribute="centerX" secondItem="EOp-K0-2j6" secondAttribute="centerX" id="IDC-tC-Vdk"/>
+                            <constraint firstItem="ewC-c8-eth" firstAttribute="centerX" secondItem="EOp-K0-2j6" secondAttribute="centerX" id="Jb7-lO-O72"/>
                             <constraint firstItem="jDS-qI-Fj6" firstAttribute="centerX" secondItem="EOp-K0-2j6" secondAttribute="centerX" id="Mib-MB-0h0"/>
+                            <constraint firstItem="jDS-qI-Fj6" firstAttribute="top" secondItem="ewC-c8-eth" secondAttribute="bottom" constant="32" id="kRt-Oe-zSe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EOp-K0-2j6"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYF-Du-RWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1614" y="21"/>
+            <point key="canvasLocation" x="1618" y="32"/>
         </scene>
     </scenes>
 </document>

@@ -27,6 +27,6 @@ public class Router {
 	}
 	
 	public static var onComplete: RouteHandler {
-		return { $0.sender?.remove(payload: $0) }
+		return { $0.sender?.remove(payload: $0, animated: true, completion: nil) }
 	}
 }
